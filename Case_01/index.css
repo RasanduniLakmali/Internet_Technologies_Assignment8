@@ -1,0 +1,51 @@
+body{
+    background: #b4b1b1;
+    overflow: hidden;
+}
+#heading{
+    color: hotpink;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+.gifs{
+    height: 100px;
+}
+section{
+    display: flex;
+    margin-top: 200px;
+
+}
+section>div{
+    margin: 6px;
+    display: flex;
+}
+section>div>h4{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+    color: #336e6f;
+}
+#home_img{
+    height: 200px;
+    width: 300px;
+    margin-left: 80vw;
+    margin-top: -200px;
+}
+.buttons{
+    height: 40px;
+    width: 100px;
+    color: white;
+    background: #cb4545;
+    border-color: transparent;
+    border-radius: 10px;
+    font-size: 15px;
+}
+#stop_button{
+    margin-left: 80vw;
+    cursor: pointer;
+}
+#start_button{
+    margin-left: 40px;
+    cursor: pointer;
+}

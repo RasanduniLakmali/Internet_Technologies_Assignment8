@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 01</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<h1 id="heading">JS Que</h1>
+
+<div>
+    <button id="start_button" class="buttons">Start</button>
+    <button id="stop_button" class="buttons">Stop</button>
+</div>
+
+<section>
+
+    <div>
+       <img src="assets/images/man.gif" class="gifs">
+        <h4>A</h4>
+    </div>
+
+    <div>
+        <img src="assets/images/man.gif" class="gifs">
+        <h4>B</h4>
+    </div>
+
+    <div>
+        <img src="assets/images/man.gif" class="gifs">
+        <h4>C</h4>
+    </div>
+
+    <div>
+        <img src="assets/images/man.gif" class="gifs">
+        <h4>D</h4>
+    </div>
+
+    <div>
+        <img src="assets/images/man.gif" class="gifs">
+        <h4>E</h4>
+    </div>
+
+    <div>
+        <img src="assets/images/man.gif" class="gifs">
+        <h4>F</h4>
+    </div>
+
+</section>
+
+<img src="assets/images/home.png" id="home_img">
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+
+<script>
+
+    let array = ["A", "B", "C", "D", "E", "F"];
+
+    let interval;
+
+    $('#start_button').on('click',function (){
+
+        interval = setInterval(() => {
+
+            let lastValue = array.pop();
+            array.unshift(lastValue);
+            console.log(array);
+
+            $('h4').eq(0).text(array[0]);
+            $('h4').eq(1).text(array[1]);
+            $('h4').eq(2).text(array[2]);
+            $('h4').eq(3).text(array[3]);
+            $('h4').eq(4).text(array[4]);
+            $('h4').eq(5).text(array[5]);
+
+        }, 2000);
+
+    });
+
+    $('#stop_button').on('click',function (){
+        clearInterval(interval);
+    });
+
+</script>
+
+</body>
+</html>
