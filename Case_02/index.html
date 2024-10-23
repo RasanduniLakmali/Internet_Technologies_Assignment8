@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 02</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
+
+</head>
+<body>
+
+<section>
+
+    <h3 id="heading">Java Script Queue</h3>
+
+    <div id="middleBox">
+
+        <div id="rec1" class="rectangles"></div>
+        <div id="rec2" class="rectangles"></div>
+        <div id="rec3" class="rectangles"></div>
+        <div id="rec4" class="rectangles"></div>
+        <div id="rec5" class="rectangles"></div>
+        <div id="rec6" class="rectangles"></div>
+
+    </div>
+
+    <div>
+
+        <div id="line1" class="lines"></div>
+        <div id="line2" class="lines"></div>
+
+    </div>
+
+    <div>
+        <button id="start_button" class="buttons">Start</button>
+        <button id="stop_button" class="buttons">Stop</button>
+    </div>
+
+</section>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+
+<script>
+
+    let coloursArray = ["red","green","blue","yellow","pink","hotpink"];
+    let interval;
+
+    $('#start_button').on('click',function (){
+
+        interval = setInterval(() =>{
+
+            let lastColour = coloursArray.pop();
+            coloursArray.unshift(lastColour);
+            console.log(coloursArray);
+
+            $('#rec1').css('background-color',coloursArray[0]);
+            $('#rec2').css('background-color',coloursArray[1]);
+            $('#rec3').css('background-color',coloursArray[2]);
+            $('#rec4').css('background-color',coloursArray[3]);
+            $('#rec5').css('background-color',coloursArray[4]);
+            $('#rec6').css('background-color',coloursArray[5]);
+
+        },2000);
+
+    });
+
+    $('#stop_button').on('click',function (){
+        clearInterval(interval);
+    });
+
+</script>
+
+</body>
+</html>

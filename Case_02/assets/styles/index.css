@@ -1,0 +1,92 @@
+body{
+    background: #273e51;
+}
+section{
+    position: relative;
+}
+section>h3{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 60px;
+}
+.lines{
+    position: absolute;
+    width: 700px;
+    height: 2px;
+    background: white;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#line1{
+    top: 250px;
+}
+#line2{
+    top: 350px;
+}
+#middleBox{
+    width: fit-content;
+    height: fit-content;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.rectangles{
+    width: 100px;
+    height: 45px;
+    border-radius: 7px;
+    display: inline-block;
+}
+#rec1{
+    position: absolute;
+    background: red;
+    top: 200px;
+    left: 380px;
+}
+#rec2{
+    background: darkgreen;
+}
+#rec3{
+    background: blue;
+}
+#rec4{
+    background: yellow;
+}
+#rec5{
+    background: pink;
+}
+#rec6{
+    background: hotpink;
+    position: relative;
+    top: 290px;
+    left: 90px;
+}
+#rec2,
+#rec3,
+#rec4,
+#rec5{
+    position: relative;
+    top: 215px;
+    left: 60px;
+    margin: 2px;
+}
+.buttons{
+    height: 40px;
+    width: 100px;
+    color: white;
+    background: darkslateblue;
+    border-color: transparent;
+    border-radius: 10px;
+    font-size: 15px;
+}
+#stop_button{
+    margin-left: 80vw;
+    cursor: pointer;
+}
+#start_button{
+    margin-left: 40px;
+    cursor: pointer;
+}
